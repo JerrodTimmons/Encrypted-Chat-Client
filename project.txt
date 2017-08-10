@@ -1,1 +1,3 @@
-lkfjdsa
+This branch is to allow for randomly generated prime values to be
+  incorporated into the current program allowing for a more secure
+  encryption algorithm.
