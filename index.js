@@ -36,7 +36,7 @@ app.get('/', function(request, response){
   if(error) throw error;
   else console.log("file created..");
 
-  execFile('/root/test', function(error, stdout, stderr) {
+  execFile(__dirname + '/test', function(error, stdout, stderr) {
 
   var rd = readline.createInterface({
      input: fs.createReadStream(__dirname + '/textfile.txt'),
