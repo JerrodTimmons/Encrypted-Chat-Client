@@ -1,5 +1,6 @@
 #include <fstream>
 #include "encryptor.h"
+#include "primegenerator.h"
 #include <algorithm>
 
 using namespace std;
@@ -28,8 +29,8 @@ int main()
     };
 
  long int prime1, prime2;
- prime1 = 97;//prime();
- prime2 = 101;//prime();
+ prime1 = primegenerator();
+ prime2 = primegenerator();
 
  char array[100];
 
@@ -49,6 +50,3 @@ int main()
     createValues(phi, prime1,prime2, msg, n, array, *en, length);
 
     }
-
-
-
