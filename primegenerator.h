@@ -1,5 +1,5 @@
-#ifndef ENCRYPTOR_H
-#define ENCRYPTOR_H
+#ifndef PRIMEGENERATOR_H
+#define PRIMEGENERATOR_H
 
 #include <stdio.h>
 #include <iostream>
@@ -14,7 +14,7 @@
 using namespace std;
 
 long int primegenerator(){
-
+ long int test;
   srand (time(NULL));
   int check = 0;
 while (check == 0){
@@ -31,4 +31,4 @@ while (check == 0){
 
 
 
-#endif // ENCRYPTOR_H
+#endif // PRIMEGENERATOR_H

@@ -131,4 +131,3 @@ long int findD(long int e, long int phi)
 
 
 #endif // ENCRYPTOR_H
-

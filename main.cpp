@@ -6,6 +6,7 @@
 using namespace std;
 
 void createValues(long int, long int, long int, long int, long int, char *, long long int *, int);
+long int primegenerator();
 
 int main()
 {
@@ -31,6 +32,13 @@ int main()
  long int prime1, prime2;
  prime1 = primegenerator();
  prime2 = primegenerator();
+ ofstream newfile;
+ newfile.open ("primes.txt");
+
+ newfile<<prime1;
+ newfile<<"\n";
+ newfile<<prime2;
+ newfile.close();
 
  char array[100];
 
