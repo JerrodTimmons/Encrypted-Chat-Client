@@ -9,7 +9,7 @@ var readline = require('readline')
 var execFile = require('child_process').execFile;
 
 app.get('/', function(request, response){
-  response.sendFile('/root/index.html')
+  response.sendFile(__dirname + '/index.html')
 })
 
   io.on('connection', function(socket){
@@ -39,14 +39,14 @@ app.get('/', function(request, response){
   execFile('/root/test', function(error, stdout, stderr) {
 
   var rd = readline.createInterface({
-     input: fs.createReadStream('/root/textfile.txt'),
+     input: fs.createReadStream(__dirname + '/textfile.txt'),
      output: process.stdout,
      console: false
     })
 
    rd.on('line', function(line) {
    io.emit('chat message', line)
-   fs.unlinkSync('/root/textfile.txt')
+   fs.unlinkSync(__dirname + '/textfile.txt')
    });
 
 
